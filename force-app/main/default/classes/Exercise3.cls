@@ -86,4 +86,5 @@ public class Exercise3{
             Database.insert(newOppCompetitors,false);
         } 
     }
+    //Adding a comment
 }
