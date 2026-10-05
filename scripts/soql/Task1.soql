@@ -1,0 +1,21 @@
+Id,Subject,Status,IsClosed
+500jV00000ILehdQAD,Printer Issue,New,false
+500jV00000ILeheQAD,Printer Troubleshooting,New,false
+500jV00000ILehfQAD,Printer Problem,New,false
+500jV00000ILehgQAD,Printing Error,New,false
+500jV00000ILehhQAD,Printer Setup,New,false
+500jV00000ILehiQAD,Printer Configuration,New,false
+500jV00000ILehjQAD,Printer Connectivity,New,false
+500jV00000ILehkQAD,Printer Maintenance,New,false
+500jV00000ILehlQAD,Printer Repair,New,false
+500jV00000ILehmQAD,Printer Network Issue,New,false
+500jV00000ILehnQAD,Laptop Issue,New,false
+500jV00000ILehoQAD,Laptop Troubleshooting,New,false
+500jV00000ILehpQAD,Laptop Problem,New,false
+500jV00000ILehqQAD,Laptop Error,New,false
+500jV00000ILehrQAD,Laptop Setup,New,false
+500jV00000ILehsQAD,Laptop Configuration,New,false
+500jV00000ILehtQAD,Laptop Connectivity,New,false
+500jV00000ILehuQAD,Laptop Maintenance,New,false
+500jV00000ILehvQAD,Laptop Repair,New,false
+500jV00000ILehwQAD,Laptop Network Issue,New,false
