@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Parent-Child Communication Exercise" icon-name="standard:multi_select_checkbox">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-var-bottom_medium">
+                <p class="slds-var-m-bottom_small">Clicking this button invokes a public JavaScript method inside the nested child component below:</p>
+                <lightning-button 
+                    label="Increment Child Counter" 
+                    variant="brand" 
+                    onclick={handleIncrementClick}>
+                </lightning-button>
+            </div>
+            <c-child-counter-component></c-child-counter-component>
+
+        </div>
+
+    </lightning-card>
+</template>
