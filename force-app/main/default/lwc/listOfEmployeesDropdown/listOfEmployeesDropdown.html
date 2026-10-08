@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="Employee Directory" icon-name="standard:user">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-grid slds-grid_vertical-align-end slds-var-m-bottom-medium">
+                <div class="slds-var-m-bottom_medium">
+                    <lightning-combobox 
+                    name="department"
+                    label="Select Department"
+                    value={selectedDepartment}
+                    options={departmentOptions}
+                    onchange={handleDepartmentChange}
+                    >
+                </lightning-combobox>
+                </div>
+               
+            </div>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <h3 class="slds-text-heading_small slds-var-m-bottom_small">Employees</h3>
+                    <template if:true={filteredEmployees.length}>
+                        <ul class="slds-has-dividers_bottom-space">
+                            <template for:each={filteredEmployees} for:item="emp">
+                                <li key={emp.id}
+                                data-id={emp.id}
+                                onclick={handleSelectedEmployee}
+                                class="slds-item slds-var-p-around_small"
+                                style="cursor: pointer; background: #f3f3f3; margin-bottom: 4px; border-radius: 4px">
+                                <strong>{emp.name}</strong>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                    <template if:false={filteredEmployees.length}>
+                        <p class="slds-text-color_weak">Select a department .</p>
+                    </template>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <h3 class="slds-text-heading_small slds-var-m-bottom_small">Employee Details</h3>
+                    <template if:true={selectedEmployee}>
+                        <div class="slds-box slds-theme_shade">
+                            <p class="slds-var-m-bottom_mini"><strong>ID:</strong>{selectedEmployee.id}</p>
+                             <p class="slds-var-m-bottom_mini"><strong>Name:</strong>{selectedEmployee.name}</p>
+                              <p class="slds-var-m-bottom_mini"><strong>Department:</strong>{selectedEmployee.department}</p>
+                               <p><strong>Position:</strong> {selectedEmployee.position}</p>
+                        </div>
+                    </template>
+                     <template if:false={selectedEmployee}>
+                        <p class="slds-text-color_weak">Select an employee from the list to view full data.</p>
+                     </template>
+                </div>
+            </div>
+        </div> 
+
+    </lightning-card>
+</template>
