@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Toggle Child Exercise" icon-name="standard:dashboard">
+        <div class="slds-var-m-around_medium">
+
+            <div class="slds-box slds-theme_default">
+                <h3 class="slds-text-heading_small">
+                    Parent Dashboard Status Tracker:
+                </h3>
+                       <p> <strong>Child A:</strong>{child1Status}</p>
+                       <p> <strong>Child B:</strong>{child2Status}</p>
+            </div>
+            
+            <c-status-child-component name="Child Component A"
+             onstatuschange={handleChildStatusChange}>
+            </c-status-child-component>
+            <c-status-child-component
+            name="Child Component B"
+            onstatuschange={handleChildStatusChange}>
+        </c-status-child-component>
+
+        </div>
+
+    </lightning-card>
+</template>
